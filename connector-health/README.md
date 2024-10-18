@@ -33,18 +33,11 @@ You should see output similar to this:
 $ ./list-connectors.py 
 [
   {
-    "integration": "CrowdStrikeFalcon",
+    "integration": "Microsoft365",
     "cards": [
       {
-        "identifier": "Crowdstrike - Incidents Connector_4589a7ec-8d87-11ef-86bf-00163ec19d19",
-        "isEnabled": false,
-        "isRemote": false,
-        "displayName": "Crowdstrike - Incidents Connector",
-        "status": 1
-      },
-      {
         "identifier": "Microsoft 365 Connector_55dab596-8d87-11ef-b630-00163ec19d19",
-        "isEnabled": false,
+        "isEnabled": true,
         "isRemote": false,
         "displayName": "Microsoft 365 Events Connector",
         "status": 1
