@@ -1,6 +1,10 @@
 # SOAR Connector Health Checks
 
-You can use these scripts to check the health of your SOAR connectors. They use the SecOps/SOAR API to retrieve connector stats.
+These scripts can check the health of your SOAR connectors. They use the SecOps/SOAR API to retrieve connector stats.
+
+For more info on the SOAR API, see the Swagger API docs interface at:
+
+https://{your_instance_url}/swagger/index.html
 
 # Usage
 
