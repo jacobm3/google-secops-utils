@@ -7,8 +7,8 @@ You can use these scripts to check the health of your SOAR connectors. They use 
 Export the following environment variables:
 
 ```
-SOAR_HOSTNAME=your-instance.siemplify-soar.com
-SOAR_API_KEY=xxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyy
+export SOAR_HOSTNAME=your-instance.siemplify-soar.com
+export SOAR_API_KEY=xxxxxxx-yyyy-zzzz-xxxx-yyyyyyyyy
 ```
 
 Run `list-connectors.py` to obtain the identifier of the connector in question:
