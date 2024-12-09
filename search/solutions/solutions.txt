@@ -1,0 +1,9 @@
+
+# 4
+show me blocked user login events with an event code of 4625 where src.hostname is 
+not null
+
+metadata.event_type = "USER_LOGIN" AND security_result.action = "BLOCK" AND metadata.product_event_type = "4625"
+
+metadata.event_type = "USER_LOGIN" AND security_result.action = "BLOCK" AND metadata.product_event_type = "4625" AND src.hostname != ""
+
