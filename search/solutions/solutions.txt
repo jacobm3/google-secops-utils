@@ -1,9 +1,20 @@
+# 1
+show me file creation events for files containing the filenames pass.csv, users.csv and 
+spray.ps1
+metadata.event_type = "FILE_CREATION" AND 
+(target.file.full_path = /pass.csv/ OR target.file.full_path = /users.csv/ OR target.file.full_path = /spray.ps1/)
+
+# 2
+show me process launch events with an event code of 4104 for the file spray.ps1
+metadata.event_type = "PROCESS_LAUNCH" AND target.process.file.full_path = /spray\.ps1$/ nocase AND metadata.product_event_type = "4104"
+
+# 3
+target.process.file.full_path != /spray\.ps1$/ nocase AND metadata.product_event_type = "4104"
+
+target.process.file.full_path != /spray\.ps1$/ nocase AND metadata.product_event_type = "4104" AND (security_result.description = /Countdown-Timer/ nocase OR security_result.description = /Get-ObservationWindow/ nocase OR security_result.description = /Invoke-DomainPasswordSpray/ nocase)
 
 # 4
 show me blocked user login events with an event code of 4625 where src.hostname is 
 not null
-
-metadata.event_type = "USER_LOGIN" AND security_result.action = "BLOCK" AND metadata.product_event_type = "4625"
-
 metadata.event_type = "USER_LOGIN" AND security_result.action = "BLOCK" AND metadata.product_event_type = "4625" AND src.hostname != ""
 
