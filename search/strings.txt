@@ -1,0 +1,7 @@
+powershell -ec
+powershell.*-ec
+mimikatz.*sekurlsa
+"CommandLine.*mimikatz.*sekurlsa
+commandline.*mimikatz.*sekurlsa
+EventID":4688.*":\s*"mimikatz.*sekurlsa
+EventID":\s*(?:4720|4728|4732)
