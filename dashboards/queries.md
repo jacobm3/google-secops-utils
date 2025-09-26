@@ -101,14 +101,3 @@ metadata.event_type = ${event_type}
 )
 ```
 
-# 07
-```
-
-```
-
-# 08
-
-```
-
-```
-
