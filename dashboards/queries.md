@@ -60,7 +60,54 @@ order:
 
 ```
 
-# 
+# 06 Adding Drilldowns to Charts
+
+```
+metadata.event_type = ${event_type}
+(
+   re.capture(principal.hostname, `(.*)\.stackedpads.local`) in %key_servers or
+   re.capture(target.hostname, `(.*)\.stackedpads.local`) in %key_servers or
+   re.capture(src.hostname, `(.*)\.stackedpads.local`) in %key_servers
+)
+```
+
+https://cloud.google.com/chronicle/docs/unified-data-model/udm-usage
+
+
+
+# 07 Building a time chart
+
+```
+$severity = detection.detection.severity
+$date = timestamp.get_timestamp(detection.detection_time.seconds, "%F")
+match:
+   $date, $severity
+outcome:
+   $detection_count = count($severity)
+order:
+   $date asc
+
+```
+
+# 06 Adding Drilldowns to Charts
+
+View events for key servers - 
+```
+metadata.event_type = ${event_type}
+(
+   re.capture(principal.hostname, `(.*)\.stackedpads.local`) in %key_servers or
+   re.capture(target.hostname, `(.*)\.stackedpads.local`) in %key_servers or
+   re.capture(src.hostname, `(.*)\.stackedpads.local`) in %key_servers
+)
+```
+
+# 06 Adding Drilldowns to Charts
+
+```
+
+```
+
+# 06 Adding Drilldowns to Charts
 
 ```
 
