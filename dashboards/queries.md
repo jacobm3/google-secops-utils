@@ -101,13 +101,12 @@ metadata.event_type = ${event_type}
 )
 ```
 
-# 06 Adding Drilldowns to Charts
-
+# 07
 ```
 
 ```
 
-# 06 Adding Drilldowns to Charts
+# 08
 
 ```
 
